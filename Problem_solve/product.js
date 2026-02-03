@@ -49,23 +49,6 @@ function maxPhone(phones){
 }
 
 
-// function maxPhone(phones2){
-
-//     let maxPrice = phones2[0];
-
-//     for ( const phones of phones2)
-//     {
-//         if ( phones.price > maxPrice.price)
-//         {
-//             maxPrice = phones;
-//         }
-        
-//     }
-//     return maxPrice;
-// }
-
-
-
 const minPrice = minPhone(phones);
 const maxPrice = maxPhone(phones);
 console.log(minPrice);
