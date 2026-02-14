@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/styles.css">
+    <style>
+        h1{
+            color: red;
+        }
+        #fooditem{
+            color: green;
+        }
+        #fruititem{
+            color: blue;
+        }   
+    </style>
+</head>
+<body>
+    <h1 id="fooditem">Food List</h1>
+    <ul id="fooditem">
+        <li class="food">Pizza</li>
+        <li>Burger</li>
+        <li class="food">Pasta</li>
+        <li>Salad</li>
+    </ul>
+    <h1 id="fruititem">Fruits List</h1>
+    <ul >
+        <li class="food">Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li class="food">Grapes</li>
+    </ul>
+    <script>
+        const foodList = document.getElementById("fooditem");
+        console.log(foodList.innerText);
+        const foods = document.getElementsByClassName("food");
+        for(const food of foods){
+            console.log(food.innerText);
+        } 
+        
+    </script>
+
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
