@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title-text">Rashdul alam</h1>
+    <button id="btn-click">click me </button>
+
+    <script>
+        document.getElementById("btn-click").addEventListener('click',function()
+        {
+            document.body.style.backgroundColor = 'red'
+            const title = document.getElementById('title-text')
+            title.innerText = "Hello world it is javascipt."
+            console.log(title)
+        })
+    </script>
+    <script src="ev.js"></script>
+</body>
+</html>

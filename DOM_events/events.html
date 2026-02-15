@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log('Button clicked!')">click</button>
+    <input type="text" id="input-field" placeholder="Type something...">
+
+    <button onclick="makeYellow()">Yellow </button>
+
+    <!-- Option 2 -->
+     <button id="btn-make-blue">make blue</button>
+     <!-- Button 3 -->
+
+     <button id="btn-make-purple">Make purple</button>
+
+     <!--button 4 -->
+        <button id="btn-make-pink">Make pink</button>   
+
+    <script>
+        function makeYellow(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+        const bluebutton = document.getElementById('btn-make-blue');
+        console.log(bluebutton);
+        bluebutton.onclick = function(){
+            document.body.style.backgroundColor = 'blue';
+        }
+
+        const purplebtn = document.getElementById('btn-make-purple');
+            purplebtn.onclick = makepurple;
+
+        function makepurple()
+        {
+            document.body.style.animationDirection = 'alternate';
+            document.body.style.animationDuration = '2s';
+            document.body.style.backgroundColor = 'purple';
+        }
+
+        document.getElementById("btn-make-pink").addEventListener('click',function pink()
+        {
+            document.body.style.backgroundColor = 'pink';
+        })
+    </script>
+    <script src="ev.js"></script>   
+</body>
+</html>
