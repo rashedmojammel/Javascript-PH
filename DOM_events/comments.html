@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cmnt{
+        padding: 5px;
+        margin-left: 25%;
+        border: 2px solid black;
+        background: skyblue;
+        border-radius: 5px;
+        width: 50%;
+       
+    
+    }
+    form
+    {
+        justify-content: center;
+    }
+</style>
+<body>
+    <h3>All comments here!</h3>
+    <div id="comment-box">
+        <p class="cmnt">Lorem, ipsum.</p>
+    <p class="cmnt">Eveniet, perspiciatis?</p>
+    <p class="cmnt">Libero, maxime.</p>
+    </div>
+    
+    
+    <form>
+        <textarea id="input-text" cols="60" rows="10"></textarea><br>
+        <button id="submit">Submit</button>
+    </form>
+    <script>
+        //step 1 : set an event handler 
+        document.getElementById("submit").addEventListener("click",function(){
+
+            //step 2 : get the comment written in text area
+            const comment = document.getElementById("input-text");
+            const newComment = comment.value;
+            console.log(newComment);
+
+            //step 3 : get the parentNode where to publish
+
+            const newCommentBox = document.getElementById("comment-box");
+           // console.log("added")
+
+           const commentElement = document.createElement('p');
+           commentElement.classList.add('cmnt')
+           commentElement.innerText = newComment
+
+           newCommentBox.appendChild(commentElement)
+
+
+            
+        })
+    </script>
+</body>
+</html>
