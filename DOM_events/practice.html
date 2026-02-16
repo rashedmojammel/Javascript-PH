@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box button{
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="box">
+     <!-- <button id="btn-mouse">Micky mouse </button><br>
+    <button id="btn-mouse2">Micky mouse1 </button><br>
+    <button id="">Micky mouse2 </button><br>
+    <input type="text" id="btn-mouse3">
+    <button id="">Micky mouse3 </button><br>
+    <input type="text" placeholder="Email" id="btn-mouse4">
+    <button id="btn-mouse5">Micky mouse4 </button><br> -->
+
+
+
+    <h1 id="secret-info">Secrect info maka bosda</h1>
+    <input type="text" placeholder="Delete" id="btn-mouse5" >
+    <button id="btn-delete" disabled>Delete </button><br>
+
+    </section>
+    
+    <script>
+      /*  document.getElementById("btn-mouse").addEventListener("mouseenter", function(){
+            console.log("Event triggerd!")
+        })
+        document.getElementById("btn-mouse2").addEventListener("mousemove", function(){
+            console.log("Event triggerd2!")
+        })
+        document.getElementById("btn-mouse3").addEventListener("focus", function(){
+            console.log("Useer about to write!")
+        })
+        document.getElementById("btn-mouse4").addEventListener("keyup", function(event){
+            console.log("Useer about to write to email!",event.target.value)
+        }) */
+
+         document.getElementById("btn-mouse5").addEventListener("keyup", function(event){
+            const text = event.target.value;
+           const btnDlt =  document.getElementById("btn-delete")
+            if(text === 'delete')
+            {
+                console.log("user type" , text)
+                btnDlt.removeAttribute('disabled');
+                const secret = document.getElementById("secret-info");
+                secret.style.color = 'red'
+                secret.innerText = "Deleted has been attemped";
+            }
+            else
+            {
+                btnDlt.setAttribute('disabled',true)
+                const secret = document.getElementById("secret-info");
+                secret.style.color = 'black'
+                
+            }
+        })
+        
+
+    </script>
+</body>
+</html>
